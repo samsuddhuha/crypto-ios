@@ -26,3 +26,12 @@ struct Usd: Decodable {
 }
 
 
+struct DataNews: Decodable {
+    var body, title: String?
+    var source_info: SourceInfo?
+}
+
+struct SourceInfo: Decodable {
+    var name: String?
+}
+
