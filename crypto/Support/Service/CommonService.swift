@@ -11,7 +11,7 @@ import SwiftyJSON
 
 enum Common: Equatable {
     case topListCrypto
-    case news(category: String)
+    case news(categories: String)
 }
 
 let commonClosure = { (target: Common) -> Endpoint in
@@ -36,7 +36,7 @@ extension Common: TargetType {
         case .topListCrypto:
             return "top/totaltoptiervolfull"
         case .news:
-            return "v2/news"
+            return "v2/news/"
         }
     }
     
@@ -52,14 +52,14 @@ extension Common: TargetType {
         var data = [String:Any]()
         
         switch self {
-        case .topListCrypto, .news:
-            data["limit"] = 10
+        case .topListCrypto:
+            data["limit"] = 50
             data["tsym"] = "USD"
             
             return .requestParameters(parameters: data, encoding: JSONEncoding.default)
             
-        case .news(let category):
-            data["categories"] = category
+        case .news(let categories):
+            data["categories"] = categories
             
             return .requestParameters(parameters: data, encoding: JSONEncoding.default)
         }

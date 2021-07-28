@@ -14,7 +14,6 @@ target 'crypto' do
   pod 'iOSNFramework'
   pod 'NVActivityIndicatorView', '~> 4.4'
 
-
   target 'cryptoTests' do
     inherit! :search_paths
     # Pods for testing

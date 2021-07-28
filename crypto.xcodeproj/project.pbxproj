@@ -11,6 +11,13 @@
 		6015793726B06A2D00FA471A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015793626B06A2D00FA471A /* PaddingLabel.swift */; };
 		6015793C26B070A200FA471A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015793B26B070A200FA471A /* StringExtension.swift */; };
 		6015794126B07B0200FA471A /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015794026B07B0200FA471A /* ControllerExtension.swift */; };
+		6015799526B0FE1900FA471A /* DailogFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015799426B0FE1900FA471A /* DailogFailure.swift */; };
+		6015799A26B0FE2C00FA471A /* DialogFailure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6015799926B0FE2C00FA471A /* DialogFailure.xib */; };
+		601579A226B103CE00FA471A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601579A126B103CE00FA471A /* ViewExtension.swift */; };
+		601579A826B1090600FA471A /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601579A726B1090600FA471A /* News.storyboard */; };
+		601579AD26B1092100FA471A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601579AC26B1092100FA471A /* NewsViewController.swift */; };
+		601579B226B1093E00FA471A /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601579B126B1093E00FA471A /* NewsViewCell.swift */; };
+		601579B726B10C0F00FA471A /* NewsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601579B626B10C0F00FA471A /* NewsModule.swift */; };
 		605CA9F226AFF08E0001CC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605CA9F126AFF08E0001CC52 /* AppDelegate.swift */; };
 		605CA9F426AFF08E0001CC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605CA9F326AFF08E0001CC52 /* SceneDelegate.swift */; };
 		605CA9F626AFF08E0001CC52 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605CA9F526AFF08E0001CC52 /* CryptoViewController.swift */; };
@@ -51,6 +58,13 @@
 		6015793626B06A2D00FA471A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		6015793B26B070A200FA471A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6015794026B07B0200FA471A /* ControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
+		6015799426B0FE1900FA471A /* DailogFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailogFailure.swift; sourceTree = "<group>"; };
+		6015799926B0FE2C00FA471A /* DialogFailure.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogFailure.xib; sourceTree = "<group>"; };
+		601579A126B103CE00FA471A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		601579A726B1090600FA471A /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		601579AC26B1092100FA471A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		601579B126B1093E00FA471A /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
+		601579B626B10C0F00FA471A /* NewsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModule.swift; sourceTree = "<group>"; };
 		605CA9EE26AFF08E0001CC52 /* crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605CA9F126AFF08E0001CC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605CA9F326AFF08E0001CC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +127,7 @@
 				6015793626B06A2D00FA471A /* PaddingLabel.swift */,
 				6015793B26B070A200FA471A /* StringExtension.swift */,
 				6015794026B07B0200FA471A /* ControllerExtension.swift */,
+				601579A126B103CE00FA471A /* ViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -120,8 +135,18 @@
 		6015795F26B0805E00FA471A /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				6015799926B0FE2C00FA471A /* DialogFailure.xib */,
+				6015799426B0FE1900FA471A /* DailogFailure.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		601579A626B108F800FA471A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				601579B626B10C0F00FA471A /* NewsModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		605CA9E526AFF08E0001CC52 = {
@@ -221,6 +246,10 @@
 		605CAA2826AFF2080001CC52 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				601579A626B108F800FA471A /* Module */,
+				601579A726B1090600FA471A /* News.storyboard */,
+				601579AC26B1092100FA471A /* NewsViewController.swift */,
+				601579B126B1093E00FA471A /* NewsViewCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -382,6 +411,8 @@
 			files = (
 				605CA9FE26AFF0910001CC52 /* LaunchScreen.storyboard in Resources */,
 				605CA9FB26AFF0910001CC52 /* Assets.xcassets in Resources */,
+				601579A826B1090600FA471A /* News.storyboard in Resources */,
+				6015799A26B0FE2C00FA471A /* DialogFailure.xib in Resources */,
 				605CA9F926AFF08E0001CC52 /* Crypto.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,11 +547,16 @@
 				6015794126B07B0200FA471A /* ControllerExtension.swift in Sources */,
 				605CAA2A26AFF3B20001CC52 /* DataStructure.swift in Sources */,
 				605CAA4E26B007EE0001CC52 /* CryptoModule.swift in Sources */,
+				6015799526B0FE1900FA471A /* DailogFailure.swift in Sources */,
 				605CAA4226AFFC420001CC52 /* CommonService.swift in Sources */,
 				605CAA3D26AFFC2F0001CC52 /* Config.swift in Sources */,
 				6015793726B06A2D00FA471A /* PaddingLabel.swift in Sources */,
 				605CA9F226AFF08E0001CC52 /* AppDelegate.swift in Sources */,
+				601579AD26B1092100FA471A /* NewsViewController.swift in Sources */,
+				601579B226B1093E00FA471A /* NewsViewCell.swift in Sources */,
 				605CA9F426AFF08E0001CC52 /* SceneDelegate.swift in Sources */,
+				601579B726B10C0F00FA471A /* NewsModule.swift in Sources */,
+				601579A226B103CE00FA471A /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

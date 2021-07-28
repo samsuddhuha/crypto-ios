@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fp5-iS-ib2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,22 +8,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cEU-tP-BPp">
+            <objects>
+                <navigationController id="fp5-iS-ib2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e1c-Ej-WQy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Sz-HQ-Qw3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nl0-OI-5Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="72"/>
+        </scene>
         <!--Crypto View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CryptoViewController" customModule="crypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cryptoviewcontroller" id="BYZ-38-t0r" customClass="CryptoViewController" customModule="crypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsh-Yc-bOn">
-                                <rect key="frame" x="174.5" y="60" width="65.5" height="21.5"/>
+                                <rect key="frame" x="174.5" y="104" width="65.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-la-2Za">
-                                <rect key="frame" x="0.0" y="89.5" width="414" height="806.5"/>
+                                <rect key="frame" x="0.0" y="133.5" width="414" height="762.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cryptoviewcell" rowHeight="96" id="caW-Ns-OSB" customClass="CryptoViewCell" customModule="crypto" customModuleProvider="target">
@@ -34,7 +50,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOm-Aa-uhc">
-                                                    <rect key="frame" x="16" y="16" width="382" height="80"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="80"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_rounded_gray" translatesAutoresizingMaskIntoConstraints="NO" id="cro-Xz-sey">
                                                             <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
@@ -98,9 +114,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YOm-Aa-uhc" firstAttribute="leading" secondItem="4bY-dE-Vpn" secondAttribute="leading" constant="16" id="3b2-bb-1ma"/>
-                                                <constraint firstAttribute="bottom" secondItem="YOm-Aa-uhc" secondAttribute="bottom" id="Ngb-xq-Jk9"/>
+                                                <constraint firstAttribute="bottom" secondItem="YOm-Aa-uhc" secondAttribute="bottom" constant="8" id="Ngb-xq-Jk9"/>
                                                 <constraint firstAttribute="trailing" secondItem="YOm-Aa-uhc" secondAttribute="trailing" constant="16" id="UPI-Fi-8Wt"/>
-                                                <constraint firstItem="YOm-Aa-uhc" firstAttribute="top" secondItem="4bY-dE-Vpn" secondAttribute="top" constant="16" id="Xbv-5k-VuF"/>
+                                                <constraint firstItem="YOm-Aa-uhc" firstAttribute="top" secondItem="4bY-dE-Vpn" secondAttribute="top" constant="8" id="Xbv-5k-VuF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -125,6 +141,7 @@
                             <constraint firstItem="TeD-la-2Za" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zi1-XS-DHv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GRn-K9-lZf"/>
                     <connections>
                         <outlet property="tableTopCrypto" destination="TeD-la-2Za" id="hqG-yx-0dJ"/>
                     </connections>

@@ -19,13 +19,13 @@ class CryptoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+//         Do any additional setup after loading the view.
         tableTopCrypto.isUserInteractionEnabled = false
         tableTopCrypto.delegate = self
         tableTopCrypto.dataSource = self
-        
+
         module = CryptoModule.init(viewStateDelegate: self, controller: self)
-        
+
         refresh.tintColor = UIColor.black
         refresh.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         tableTopCrypto.addSubview(refresh)
@@ -34,6 +34,7 @@ class CryptoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         setView()
     }
     
@@ -56,7 +57,7 @@ extension CryptoViewController: ViewStateDelegate{
     }
     
     func onFailure(data: Any?, tag: String, message: String) {
-        
+        DialogFailure().showDialog(parent: self, message: message)
     }
     
     func onUpdate(data: Any?, tag: String, message: String) {
@@ -89,7 +90,6 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource, UISc
         var changePct24Hour = (listData.DISPLAY?.USD?.CHANGEPCT24HOUR)!
         
         var firstChar = (changePct24Hour.characterAt(0))
-        
         if (firstChar != "-") {
             cell.labelChangePtc.backgroundColor = UIColor.systemGreen
             changePct24Hour = "+\(changePct24Hour)"
@@ -98,16 +98,30 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource, UISc
         }
         
         firstChar = (changePctHour.characterAt(0))
-        
         if (firstChar != "-") {
             changePctHour = "+\(changePctHour)"
         }
         
         cell.labelChangePtc.text = "\(changePctHour)(\(changePct24Hour))"
         
-        
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let temp = listTopCrypto[indexPath.row]
+        let nameCrypto = temp.CoinInfo?.Name
+//        print("cek : \(nameCrypto)")
+        toNews(categories: nameCrypto!)
+        
+    }
+    
+    private func toNews(categories: String) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "News", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "newsviewcontroller") as! NewsViewController
+        viewController.categories = categories
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     
