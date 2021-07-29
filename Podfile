@@ -8,7 +8,6 @@ target 'crypto' do
   # Pods for crypto
   
   pod 'MaterialComponents/BottomSheet'
-  pod 'SwiftyRSA'
   pod 'SwiftyJSON'
   pod 'Moya', '~> 14.0'
   pod 'iOSNFramework'
