@@ -38,9 +38,6 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
   - SwiftyJSON (5.0.1)
-  - SwiftyRSA (1.6.0):
-    - SwiftyRSA/ObjC (= 1.6.0)
-  - SwiftyRSA/ObjC (1.6.0)
 
 DEPENDENCIES:
   - iOSNFramework
@@ -48,7 +45,6 @@ DEPENDENCIES:
   - Moya (~> 14.0)
   - NVActivityIndicatorView (~> 4.4)
   - SwiftyJSON
-  - SwiftyRSA
 
 SPEC REPOS:
   trunk:
@@ -58,7 +54,6 @@ SPEC REPOS:
     - Moya
     - NVActivityIndicatorView
     - SwiftyJSON
-    - SwiftyRSA
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -67,8 +62,7 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
-  SwiftyRSA: 3b9c9179744217951facc6a3e9ae8d8c97061ffa
 
-PODFILE CHECKSUM: d87956171fb9176f03cc4b7fd98a46063e7ee6b6
+PODFILE CHECKSUM: bf51b19a7a383e7daf62135292af92db42ae7aec
 
 COCOAPODS: 1.10.1
